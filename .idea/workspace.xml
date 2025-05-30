@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e828cd24-85be-4fc4-bfa8-a35e9f749714" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/InstagramToTelegramBot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
+    <list default="true" id="e828cd24-85be-4fc4-bfa8-a35e9f749714" name="Changes" comment="feat: Add database functionality (master)&#10;&#10;Added a SQLite database to store Telegram channel IDs.&#10;&#10;Includes functions to initialize the database, set a &#10;channel for a user, and retrieve a user's channel ID.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,29 +32,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.bot.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.blarc.ai.commits.intellij.plugin.settings.AppSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.bot.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,12 +73,34 @@
       <workItem from="1748550990926" duration="1464000" />
       <workItem from="1748595642174" duration="2709000" />
       <workItem from="1748598384394" duration="260000" />
-      <workItem from="1748598655899" duration="5908000" />
+      <workItem from="1748598655899" duration="7717000" />
     </task>
+    <task id="LOCAL-00001" summary="```&#10;feat: Add Instagram Reels to Telegram bot (master)&#10;&#10;Added functionality to download Instagram Reels and &#10;send them to a specified Telegram channel.  Includes &#10;handling of rate limits and error messages.  New &#10;files added for project structure, configuration, &#10;and database interaction.&#10;```">
+      <option name="closed" value="true" />
+      <created>1748613635933</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1748613635933</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Add database functionality (master)&#10;&#10;Added a SQLite database to store Telegram channel IDs.&#10;&#10;Includes functions to initialize the database, set a &#10;channel for a user, and retrieve a user's channel ID.">
+      <option name="closed" value="true" />
+      <created>1748613644149</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1748613644149</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="```&#10;feat: Add Instagram Reels to Telegram bot (master)&#10;&#10;Added functionality to download Instagram Reels and &#10;send them to a specified Telegram channel.  Includes &#10;handling of rate limits and error messages.  New &#10;files added for project structure, configuration, &#10;and database interaction.&#10;```" />
+    <MESSAGE value="feat: Add database functionality (master)&#10;&#10;Added a SQLite database to store Telegram channel IDs.&#10;&#10;Includes functions to initialize the database, set a &#10;channel for a user, and retrieve a user's channel ID." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add database functionality (master)&#10;&#10;Added a SQLite database to store Telegram channel IDs.&#10;&#10;Includes functions to initialize the database, set a &#10;channel for a user, and retrieve a user's channel ID." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/InstagramToTelegramBot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1748612544251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

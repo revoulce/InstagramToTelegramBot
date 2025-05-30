@@ -47,6 +47,18 @@ async def manual_set_channel(message: Message):
         await message.answer("ID канала должен быть числом.")
 
 
+@dp.message(Command(commands=['mychannel']))
+async def manual_get_channel(message: Message):
+    user_id = message.from_user.id
+    chat_id = get_channel(user_id)
+
+    if chat_id:
+        await message.answer(f"Твой текущий канал для загрузок: `{chat_id}`", parse_mode="Markdown")
+    else:
+        await message.answer(
+            "У тебя пока не установлен канал. Добавь меня в канал и напиши там сообщение, или используй /setchannel.")
+
+
 @dp.message(F.text.contains("instagram.com/reels/"))
 async def handle_reels(message: Message):
     url = message.text.strip()
@@ -55,7 +67,8 @@ async def handle_reels(message: Message):
     chat_id = get_channel(user_id)
 
     if chat_id is None:
-        await message.answer("Сначала добавь меня в канал и напиши там любое сообщение.")
+        await message.answer(
+            "Сначала добавь меня в канал и напиши там сообщение или используй /setchannel <ID_канала>.")
         return
 
     await message.answer("Скачиваю видео...")
