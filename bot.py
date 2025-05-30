@@ -26,7 +26,7 @@ async def send_welcome(message: Message):
 @dp.message(F.chat.type == ChatType.CHANNEL)
 async def register_channel(message: Message):
     chat_id = message.chat.id
-    user_id = message.from_user.id if message.from_user else 0
+    user_id = message.sender_chat.id
     set_channel(user_id, chat_id)
     await message.answer(f"Канал {message.chat.title} зарегистрирован! Теперь отправь ссылку на Reels мне в ЛС.")
 
