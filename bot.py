@@ -1,5 +1,6 @@
 import asyncio
 import os
+import time
 
 import yt_dlp
 from aiogram import Bot, Dispatcher, F
@@ -74,7 +75,7 @@ async def handle_reels(message: Message):
     await message.answer("Скачиваю видео...")
 
     try:
-        filename = "video.mp4"
+        filename = f"video_{int(time.time())}.mp4"
         ydl_opts = {'outtmpl': filename, 'format': 'mp4', }
 
         loop = asyncio.get_event_loop()
