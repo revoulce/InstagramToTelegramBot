@@ -1,7 +1,7 @@
 import asyncio
 import os
-import time
 import re
+import time
 
 import yt_dlp
 from aiogram import Bot, Dispatcher, F
@@ -9,8 +9,9 @@ from aiogram.enums import ChatType
 from aiogram.filters import Command
 from aiogram.types import Message, FSInputFile
 
-from config import BOT_TOKEN, COOKIE_FILE
 from database import init_db, set_channel, get_channel
+
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
@@ -86,7 +87,6 @@ async def handle_reels(message: Message):
         ydl_opts = {
             'outtmpl': filename,
             'format': 'mp4',
-            'cookiefile': COOKIE_FILE,
         }
 
         loop = asyncio.get_event_loop()
