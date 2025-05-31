@@ -101,7 +101,9 @@ async def handle_reels(message: Message):
             os.remove(filename)
 
     except Exception as e:
-        await message.answer(f"Ошибка при скачивании: {str(e)}")
+        await message.answer("Ошибка при скачивании или отправке видео.")
+        with open("error.log", "a") as f:
+            f.write(f"{e}\n")
 
     finally:
         if os.path.exists(filename):
