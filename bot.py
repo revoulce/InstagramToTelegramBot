@@ -8,7 +8,7 @@ from aiogram.enums import ChatType
 from aiogram.filters import Command
 from aiogram.types import Message, FSInputFile
 
-from config import BOT_TOKEN
+from config import BOT_TOKEN, COOKIE_FILE
 from database import init_db, set_channel, get_channel
 
 bot = Bot(token=BOT_TOKEN)
@@ -74,13 +74,23 @@ async def handle_reels(message: Message):
 
     await message.answer("Скачиваю видео...")
 
+    filename = f"video_{int(time.time())}.mp4"
+
     try:
-        filename = f"video_{int(time.time())}.mp4"
-        ydl_opts = {'outtmpl': filename, 'format': 'mp4', }
+        ydl_opts = {
+            'outtmpl': filename,
+            'format': 'mp4',
+            'cookiefile': COOKIE_FILE,
+        }
 
         loop = asyncio.get_event_loop()
 
         await loop.run_in_executor(None, lambda: yt_dlp.YoutubeDL(ydl_opts).download([url]))
+
+        if os.path.getsize(filename) > 50 * 1024 * 1024:
+            await message.answer("Файл слишком большой для отправки через Telegram бота.")
+            os.remove(filename)
+            return
 
         video = FSInputFile(filename)
 
@@ -92,6 +102,10 @@ async def handle_reels(message: Message):
 
     except Exception as e:
         await message.answer(f"Ошибка при скачивании: {str(e)}")
+
+    finally:
+        if os.path.exists(filename):
+            os.remove(filename)
 
 
 if __name__ == '__main__':
