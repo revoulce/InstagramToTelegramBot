@@ -1,6 +1,7 @@
 import asyncio
 import os
 import time
+import re
 
 import yt_dlp
 from aiogram import Bot, Dispatcher, F
@@ -60,8 +61,13 @@ async def manual_get_channel(message: Message):
             "У тебя пока не установлен канал. Добавь меня в канал и напиши там сообщение, или используй /setchannel.")
 
 
-@dp.message(F.text.contains("instagram.com/reels/"))
+@dp.message()
 async def handle_reels(message: Message):
+    pattern = r"(?:instagram\.com/reel[s]?/)"
+
+    if not message.text or not re.search(pattern, message.text):
+        return
+
     url = message.text.strip()
     user_id = message.from_user.id
 

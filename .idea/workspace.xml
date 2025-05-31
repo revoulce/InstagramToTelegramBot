@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e828cd24-85be-4fc4-bfa8-a35e9f749714" name="Changes" comment="Fix: Use timestamp in downloaded video filenames (#1)&#10;&#10;Add a timestamp to downloaded video filenames to &#10;prevent overwriting. This ensures multiple videos &#10;can be downloaded without conflicts.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e828cd24-85be-4fc4-bfa8-a35e9f749714" name="Changes" comment="Fix: Improve error handling and logging (#1)&#10;&#10;Improved error messages for video download and &#10;added logging of exceptions to error.log file.  This &#10;provides better feedback to users and aids in &#10;debugging.  Minor wording changes in commit &#10;message.">
       <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +74,7 @@
       <workItem from="1748598655899" duration="10970000" />
       <workItem from="1748627272292" duration="2756000" />
       <workItem from="1748678009822" duration="72000" />
-      <workItem from="1748680083329" duration="508000" />
+      <workItem from="1748680083329" duration="857000" />
     </task>
     <task id="LOCAL-00001" summary="```&#10;feat: Add Instagram Reels to Telegram bot (master)&#10;&#10;Added functionality to download Instagram Reels and &#10;send them to a specified Telegram channel.  Includes &#10;handling of rate limits and error messages.  New &#10;files added for project structure, configuration, &#10;and database interaction.&#10;```">
       <option name="closed" value="true" />
@@ -133,7 +132,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748619092977</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: Add cookie support and file size check (master)&#10;&#10;Improved Instagram video downloading:&#10;&#10;- Added support for cookies to bypass Instagram's &#10;  restrictions.&#10;- Implemented a file size check to prevent sending &#10;  overly large videos.  Files larger than 50MB are &#10;  rejected.&#10;- Improved error handling and cleanup.">
+      <option name="closed" value="true" />
+      <created>1748680633819</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1748680633819</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix: Improve error handling and logging (#1)&#10;&#10;Improved error messages for video download and &#10;added logging of exceptions to error.log file.  This &#10;provides better feedback to users and aids in &#10;debugging.  Minor wording changes in commit &#10;message.">
+      <option name="closed" value="true" />
+      <created>1748680699741</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1748680699741</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +162,9 @@
     <MESSAGE value="feat: Add README and improve project structure (master)&#10;&#10;Added a comprehensive README file explaining the bot's&#10;functionality, setup, and future development plans.  Also&#10;made improvements to the overall project structure for&#10;better organization and maintainability." />
     <MESSAGE value="Fix: Use timestamp in downloaded video filenames (#1)&#10;&#10;Add a timestamp to the downloaded video filenames to &#10;prevent overwriting.  This ensures that multiple &#10;videos can be downloaded without conflicts." />
     <MESSAGE value="Fix: Use timestamp in downloaded video filenames (#1)&#10;&#10;Add a timestamp to downloaded video filenames to &#10;prevent overwriting. This ensures multiple videos &#10;can be downloaded without conflicts." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: Use timestamp in downloaded video filenames (#1)&#10;&#10;Add a timestamp to downloaded video filenames to &#10;prevent overwriting. This ensures multiple videos &#10;can be downloaded without conflicts." />
+    <MESSAGE value="feat: Add cookie support and file size check (master)&#10;&#10;Improved Instagram video downloading:&#10;&#10;- Added support for cookies to bypass Instagram's &#10;  restrictions.&#10;- Implemented a file size check to prevent sending &#10;  overly large videos.  Files larger than 50MB are &#10;  rejected.&#10;- Improved error handling and cleanup." />
+    <MESSAGE value="Fix: Improve error handling and logging (#1)&#10;&#10;Improved error messages for video download and &#10;added logging of exceptions to error.log file.  This &#10;provides better feedback to users and aids in &#10;debugging.  Minor wording changes in commit &#10;message." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: Improve error handling and logging (#1)&#10;&#10;Improved error messages for video download and &#10;added logging of exceptions to error.log file.  This &#10;provides better feedback to users and aids in &#10;debugging.  Minor wording changes in commit &#10;message." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/InstagramToTelegramBot$bot.coverage" NAME="bot Coverage Results" MODIFIED="1748680119300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
